@@ -39,7 +39,29 @@ a {
 header {
   position: fixed;
   z-index: 2;
-  width: 100%; }
+  width: 100%;
+  background-color: #3a3a3a;
+  border-bottom: solid #fc9a19 3px; }
+
+.menu {
+  overflow: hidden;
+  top: 0;
+  float: right;
+  padding: 10px 0; }
+  .menu a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 0 15px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: uppercase; }
+    .menu a.current {
+      color: #fc9a19;
+      font-weight: 400; }
+    .menu a:hover {
+      color: #fc9a19; }
 
 .text-secondary {
   color: #fc9a19; }

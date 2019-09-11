@@ -1,0 +1,32 @@
+// Responsive Web page settings
+
+// Widescreens
+@include media-xl {
+
+}
+
+// Desktops & Laptops
+@include media-lg {
+    
+}
+
+// Tablets & Netbooks
+@include media-md {
+    main {
+        align-items: center;
+        text-align: center;
+
+        .lg-header {
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+// Smartphones
+@include media-sm {
+    main#home h1 {
+        margin-top: 10vh;
+    }
+    
+}

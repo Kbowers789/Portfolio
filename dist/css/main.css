@@ -1,3 +1,15 @@
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-header {
+      line-height: 1;
+      margin-bottom: 1rem; } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; } }
+
 * {
   box-sizing: border-box; }
 
@@ -61,7 +73,8 @@ header {
       color: #fc9a19;
       font-weight: 400; }
     .menu a:hover {
-      color: #fc9a19; }
+      color: #fc9a19;
+      transition: .5s ease-out; }
 
 .text-secondary {
   color: #fc9a19; }

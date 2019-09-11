@@ -28,3 +28,38 @@ $background-opacity: 0.7;
          }
     }
 }
+
+// Set text color 'themes'
+@function set-text-color($color) {
+    @if (lightness($color) > 40) {
+        @return #000000;
+    }
+    @else {
+        @return #ffffff;
+    }
+}
+
+// Media Query Mixins for responsive page elements
+@mixin media-sm {
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+}
+
+@mixin media-md {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+        @content;
+    }
+}
+
+@mixin media-xl {
+    @media screen and (min-width: 1171px) {
+        @content;
+    }
+}

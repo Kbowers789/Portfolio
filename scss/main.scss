@@ -1,5 +1,4 @@
 @import 'config';
-@import 'mobile';
 
 *{
     box-sizing: border-box;   
@@ -36,6 +35,7 @@ a {
     text-decoration: none;
 }
 
+// Menu Bar Styling
 header {
     position: fixed;
     z-index: 2;
@@ -72,13 +72,14 @@ header {
     }
 }
 
+// General Styling
 .text-secondary {
     color: $secondary-color;
 }
 
 main {
     padding: 4rem;
-    height: 100%;
+    min-height: calc(100vh - 60px);
 
     .icons {
         margin-top: 1rem;
@@ -100,3 +101,141 @@ main {
         }
     }
 }
+
+//Resume Page Styling
+.basic-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas:
+    'bio-image bio'
+    'eduheader eduheader'
+    'school1 school2'
+    'jobheader jobheader'
+    'job1 job2'
+    'expheader expheader'
+    'exp1 exp2'
+    'exp3 exp3';
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+
+    
+    .bio-image {
+        grid-area: bio-image;
+        margin: auto;
+        border-radius: 50%;
+        border: 3px solid $secondary-color;
+    }
+
+    .profile {
+        grid-area: bio;
+        font-size: 1.5rem;
+    }
+
+    .education-header {
+        grid-area: eduheader;
+        background: lighten($primary-color, 5);
+        font-size: 1.5rem;
+    }
+
+    .school-1 {
+        grid-area: school1;
+    }
+
+    .school-2 {
+        grid-area: school2;
+    }
+
+    .work-header {
+        grid-area: jobheader;
+        background: lighten($primary-color, 5);
+        font-size: 1.5rem;
+    }
+
+    .job-1 {
+        grid-area: job1;
+    }
+
+    .job-2 {
+        grid-area: job2;
+    }
+
+    .experience-header {
+        grid-area: expheader;
+        background: lighten($primary-color, 5);
+        font-size: 1.5rem;
+    }
+
+    .experience-1 {
+        grid-area: exp1;
+    }
+
+    .experience-2 {
+        grid-area: exp2;
+    }
+
+    .experience-3 {
+        grid-area: exp3;
+    }
+}
+
+//Projects Page Styling
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.7rem;
+
+    img {
+        width: 100%;
+        border: 3px solid #ffffff;
+
+        &:hover {
+            opacity: 0.5;
+            border-color: $secondary-color;
+            @include easeOut;
+        }
+    }
+}
+
+//Contact Page
+.boxes {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    text-align: center;
+    grid-gap: 1rem;
+    font-size: 30px
+}
+
+// BUtton styles
+.btn {
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 0;
+    margin-bottom: 0.3rem;
+    &:hover {
+        background-color: $secondary-color;
+        color: set-text-color($secondary-color);
+    }
+}
+
+.btn-dark {
+    @extend .btn;
+    background: darken($primary-color, 15);
+    color: #ffffff;
+}
+
+.btn-light {
+    @extend .btn;
+    background: lighten($primary-color, 50);
+    color: $primary-color;
+}
+
+#main-footer {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(darken($primary-color, 4), 1);
+    color: set-text-color($primary-color);
+    height: 60px;
+}
+
+@import 'mobile';

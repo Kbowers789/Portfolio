@@ -1,15 +1,3 @@
-@media screen and (max-width: 768px) {
-  main {
-    align-items: center;
-    text-align: center; }
-    main .lg-header {
-      line-height: 1;
-      margin-bottom: 1rem; } }
-
-@media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh; } }
-
 * {
   box-sizing: border-box; }
 
@@ -21,7 +9,7 @@ body {
   font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-image {
-    background: url(../img/home-image5.jpg);
+    background: url(../img/home-image.jpg);
     background-attachment: fixed;
     background-size: cover; }
     body#bg-image:after {
@@ -81,7 +69,7 @@ header {
 
 main {
   padding: 4rem;
-  height: 100%; }
+  min-height: calc(100vh - 60px); }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
@@ -93,3 +81,115 @@ main {
     overflow: hidden; }
     main#home h1 {
       margin-top: 20vh; }
+
+.basic-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 'bio-image bio' 'eduheader eduheader' 'school1 school2' 'jobheader jobheader' 'job1 job2' 'expheader expheader' 'exp1 exp2' 'exp3 exp3';
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto; }
+  .basic-info .bio-image {
+    grid-area: bio-image;
+    margin: auto;
+    border-radius: 50%;
+    border: 3px solid #fc9a19; }
+  .basic-info .profile {
+    grid-area: bio;
+    font-size: 1.5rem; }
+  .basic-info .education-header {
+    grid-area: eduheader;
+    background: #515151;
+    font-size: 1.5rem; }
+  .basic-info .school-1 {
+    grid-area: school1; }
+  .basic-info .school-2 {
+    grid-area: school2; }
+  .basic-info .work-header {
+    grid-area: jobheader;
+    background: #515151;
+    font-size: 1.5rem; }
+  .basic-info .job-1 {
+    grid-area: job1; }
+  .basic-info .job-2 {
+    grid-area: job2; }
+  .basic-info .experience-header {
+    grid-area: expheader;
+    background: #515151;
+    font-size: 1.5rem; }
+  .basic-info .experience-1 {
+    grid-area: exp1; }
+  .basic-info .experience-2 {
+    grid-area: exp2; }
+  .basic-info .experience-3 {
+    grid-area: exp3; }
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.7rem; }
+  .projects img {
+    width: 100%;
+    border: 3px solid #ffffff; }
+    .projects img:hover {
+      opacity: 0.5;
+      border-color: #fc9a19;
+      transition: .5s ease-out; }
+
+.boxes {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  text-align: center;
+  grid-gap: 1rem;
+  font-size: 30px; }
+
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background-color: #fc9a19;
+    color: #000000; }
+
+.btn-dark {
+  background: #1e1e1e;
+  color: #ffffff; }
+
+.btn-light {
+  background: #c4c4c4;
+  color: #444; }
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #3a3a3a;
+  color: #ffffff;
+  height: 60px; }
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-header {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  .basic-info {
+    grid-template-areas: 'bio-image' 'bio' 'eduheader' 'school1' 'school2' 'jobheader' 'job1' 'job2' 'expheader' 'exp1' 'exp2' 'exp3';
+    grid-template-columns: 1fr; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; }
+  .projects {
+    grid-template-columns: 1fr; } }

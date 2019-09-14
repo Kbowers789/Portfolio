@@ -6,6 +6,9 @@
         grid-template-columns: repeat(4, 1fr);
     }
 
+    .boxes {
+        grid-template-columns: 1fr 2fr;
+    }
 }
 
 // Desktops & Laptops
@@ -13,6 +16,7 @@
     .projects {
         grid-template-columns: repeat(3, 1fr);
     }
+
 }
 
 // Tablets & Netbooks
@@ -47,6 +51,19 @@
     .projects {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .boxes {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        'email-header'
+        'email'
+        'phone-header'
+        'phone'
+        'mail-header'
+        'mail';
+        text-align: center;
+        align-items: center;
+    }
 }
 
 // Smartphones
@@ -58,5 +75,9 @@
     .projects {
         grid-template-columns: 1fr;
     }
-    
+
+    .boxes{
+        margin: 0 0;
+    }
+
 }

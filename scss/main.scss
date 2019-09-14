@@ -6,7 +6,7 @@
 
 body {
     @include background;
-    background: $quaternary-color;
+    background: lighten($secondary-color, 30);
     color: set-text-color($primary-color);
     height: 100%;
     margin: 0;
@@ -26,7 +26,6 @@ h1, h2, h3 {
     &.sm-header {
         margin-bottom: 2rem;
         padding: 0.2rem 1rem;
-        // background: rgba(lighten($primary-color, 2), 0.5)
     }
 }
 
@@ -41,7 +40,7 @@ header {
     z-index: 2;
     width: 100%;
     background-color: rgba(darken($secondary-color, 4), 1);
-    border-bottom: solid $tertiary-color 3px;
+    border-bottom: solid $quaternary-color 3px;
 }
 
 .menu {
@@ -59,7 +58,7 @@ header {
         font-size: 20px;
         font-weight: 400;
         text-transform: uppercase;
-        text-color: set-text-color($primary-color);
+        color: set-text-color($primary-color);
 
         &.current {
             color: $tertiary-color;
@@ -75,7 +74,7 @@ header {
 
 // General Styling
 .text-secondary {
-    color: $secondary-color;
+    color: $quaternary-color;
 }
 
 main {
@@ -89,7 +88,7 @@ main {
             padding: 0.4rem;
     
             &:hover {
-                color: $secondary-color;
+                color: darken($primary-color, 8);
                 @include easeOut;
             }
         }
@@ -104,6 +103,15 @@ main {
 }
 
 //Resume Page Styling
+.download-link {
+    padding: 0.4rem;
+
+    &:hover {
+        color: darken($primary-color, 12);
+        @include easeOut;
+    }
+}
+
 .basic-info {
     display: grid;
     grid-gap: 30px;
@@ -119,12 +127,11 @@ main {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
 
-    
     .bio-image {
         grid-area: bio-image;
         margin: auto;
         border-radius: 50%;
-        border: 3px solid $secondary-color;
+        border: 3px solid $quaternary-color;
     }
 
     .profile {
@@ -200,12 +207,55 @@ main {
 //Contact Page
 .boxes {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-areas:
+    'email-header   blank'
+    'email  blank'
+    'phone-header   blank'
+    'phone  blank'
+    'mail-header    blank'
+    'mail   blank';
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    text-align: center;
-    grid-gap: 1rem;
-    font-size: 30px
+    text-align: left;
+    font-size: 30px;
+
+    .email-header {
+        grid-area: email-header;
+        border-bottom: solid 3px rgba(darken($secondary-color, 4), 1);
+        font-weight: 500;
+    }
+
+    .email {
+        grid-area: email;
+        padding-bottom: 1rem;
+    }
+
+    .phone-header {
+        grid-area: phone-header;
+        border-bottom: solid 3px rgba(darken($secondary-color, 4), 1);
+        font-weight: 500;
+    }
+    
+    .phone {
+        grid-area: phone;
+        padding-bottom: 1rem;
+    }
+    
+    .mail-header {
+        grid-area: mail-header;
+        border-bottom: solid 3px rgba(darken($secondary-color, 4), 1);
+        font-weight: 500;
+    }
+    
+    .mail {
+        grid-area: mail;
+        padding-bottom: 1rem;
+    }
+    
+
 }
+
+
 
 // BUtton styles
 .btn {
@@ -234,7 +284,7 @@ main {
 #main-footer {
     text-align: center;
     padding: 1rem;
-    background: rgba(darken($primary-color, 4), 1);
+    background: rgba(darken($secondary-color, 4), 1);
     color: set-text-color($primary-color);
     height: 60px;
 }

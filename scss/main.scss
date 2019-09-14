@@ -6,7 +6,7 @@
 
 body {
     @include background;
-    background: $primary-color;
+    background: $quaternary-color;
     color: set-text-color($primary-color);
     height: 100%;
     margin: 0;
@@ -26,7 +26,7 @@ h1, h2, h3 {
     &.sm-header {
         margin-bottom: 2rem;
         padding: 0.2rem 1rem;
-        background: rgba(lighten($primary-color, 2), 0.5)
+        // background: rgba(lighten($primary-color, 2), 0.5)
     }
 }
 
@@ -40,8 +40,8 @@ header {
     position: fixed;
     z-index: 2;
     width: 100%;
-    background-color: rgba(darken($primary-color, 4), 1);
-    border-bottom: solid $secondary-color 3px;
+    background-color: rgba(darken($secondary-color, 4), 1);
+    border-bottom: solid $tertiary-color 3px;
 }
 
 .menu {
@@ -57,16 +57,17 @@ header {
         padding: 0 15px;
         text-decoration: none;
         font-size: 20px;
-        font-weight: 300;
+        font-weight: 400;
         text-transform: uppercase;
+        text-color: set-text-color($primary-color);
 
         &.current {
-            color: $secondary-color;
+            color: $tertiary-color;
             font-weight: 400;
         }
 
         &:hover {
-            color: $secondary-color;
+            color: $tertiary-color;
             @include easeOut;
         }
     }

@@ -1,8 +1,11 @@
-$primary-color: #444;
-$secondary-color: #fc9a19;
+$primary-color: #dcc7aa;
+$secondary-color: #6b7a8f;
+$tertiary-color: #f7c331;
+$quaternary-color: #f7882f;
+
 $show-home-image: true;
-$home-image: url(../img/home-image.jpg);
-$background-opacity: 0.7;
+$home-image: url(../img/Matterhorn.jpg);
+$background-opacity: 0.0;
 
 @mixin easeOut {
     transition: .5s ease-out;
@@ -23,7 +26,7 @@ $background-opacity: 0.7;
                 width: 100%;
                 height: 100%;
                 z-index: -1;
-                background: rgba($primary-color, $background-opacity)
+                background: rgba($quaternary-color, $background-opacity)
             }
          }
     }

@@ -2,14 +2,14 @@
   box-sizing: border-box; }
 
 body {
-  background: #444;
-  color: #ffffff;
+  background: #f7882f;
+  color: #000000;
   height: 100%;
   margin: 0;
   font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-image {
-    background: url(../img/home-image.jpg);
+    background: url(../img/Matterhorn.jpg);
     background-attachment: fixed;
     background-size: cover; }
     body#bg-image:after {
@@ -20,7 +20,7 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(68, 68, 68, 0.7); }
+      background: rgba(247, 136, 47, 0); }
 
 h1, h2, h3 {
   margin: 0;
@@ -29,19 +29,18 @@ h1, h2, h3 {
     font-size: 6rem; }
   h1.sm-header, h2.sm-header, h3.sm-header {
     margin-bottom: 2rem;
-    padding: 0.2rem 1rem;
-    background: rgba(73, 73, 73, 0.5); }
+    padding: 0.2rem 1rem; }
 
 a {
-  color: #ffffff;
+  color: #000000;
   text-decoration: none; }
 
 header {
   position: fixed;
   z-index: 2;
   width: 100%;
-  background-color: #3a3a3a;
-  border-bottom: solid #fc9a19 3px; }
+  background-color: #627083;
+  border-bottom: solid #f7c331 3px; }
 
 .menu {
   overflow: hidden;
@@ -55,17 +54,18 @@ header {
     padding: 0 15px;
     text-decoration: none;
     font-size: 20px;
-    font-weight: 300;
-    text-transform: uppercase; }
+    font-weight: 400;
+    text-transform: uppercase;
+    text-color: #000000; }
     .menu a.current {
-      color: #fc9a19;
+      color: #f7c331;
       font-weight: 400; }
     .menu a:hover {
-      color: #fc9a19;
+      color: #f7c331;
       transition: .5s ease-out; }
 
 .text-secondary {
-  color: #fc9a19; }
+  color: #6b7a8f; }
 
 main {
   padding: 4rem;
@@ -75,7 +75,7 @@ main {
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
-        color: #fc9a19;
+        color: #6b7a8f;
         transition: .5s ease-out; }
   main#home {
     overflow: hidden; }
@@ -92,13 +92,13 @@ main {
     grid-area: bio-image;
     margin: auto;
     border-radius: 50%;
-    border: 3px solid #fc9a19; }
+    border: 3px solid #6b7a8f; }
   .basic-info .profile {
     grid-area: bio;
     font-size: 1.5rem; }
   .basic-info .education-header {
     grid-area: eduheader;
-    background: #515151;
+    background: #e3d3bc;
     font-size: 1.5rem; }
   .basic-info .school-1 {
     grid-area: school1; }
@@ -106,7 +106,7 @@ main {
     grid-area: school2; }
   .basic-info .work-header {
     grid-area: jobheader;
-    background: #515151;
+    background: #e3d3bc;
     font-size: 1.5rem; }
   .basic-info .job-1 {
     grid-area: job1; }
@@ -114,7 +114,7 @@ main {
     grid-area: job2; }
   .basic-info .experience-header {
     grid-area: expheader;
-    background: #515151;
+    background: #e3d3bc;
     font-size: 1.5rem; }
   .basic-info .experience-1 {
     grid-area: exp1; }
@@ -132,7 +132,7 @@ main {
     border: 3px solid #ffffff; }
     .projects img:hover {
       opacity: 0.5;
-      border-color: #fc9a19;
+      border-color: #6b7a8f;
       transition: .5s ease-out; }
 
 .boxes {
@@ -149,22 +149,22 @@ main {
   border: 0;
   margin-bottom: 0.3rem; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background-color: #fc9a19;
+    background-color: #6b7a8f;
     color: #000000; }
 
 .btn-dark {
-  background: #1e1e1e;
+  background: #c6a374;
   color: #ffffff; }
 
 .btn-light {
-  background: #c4c4c4;
-  color: #444; }
+  background: white;
+  color: #dcc7aa; }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: #3a3a3a;
-  color: #ffffff;
+  background: #d6bd9c;
+  color: #000000;
   height: 60px; }
 
 @media screen and (min-width: 1171px) {

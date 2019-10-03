@@ -68,6 +68,11 @@ header {
 .text-secondary {
   color: #f7882f; }
 
+p {
+  margin: 0; }
+  p.subtitle {
+    font-style: italic; }
+
 main {
   padding: 4rem;
   min-height: calc(100vh - 60px); }
@@ -76,7 +81,7 @@ main {
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
-        color: #d0b48d;
+        color: #e2a909;
         transition: .5s ease-out; }
   main#home {
     overflow: hidden; }
@@ -86,7 +91,7 @@ main {
 .download-link {
   padding: 0.4rem; }
   .download-link:hover {
-    color: #caaa7f;
+    color: #e2a909;
     transition: .5s ease-out; }
 
 .basic-info {
@@ -102,27 +107,34 @@ main {
     border: 3px solid #f7882f; }
   .basic-info .profile {
     grid-area: bio;
-    font-size: 1.5rem; }
+    font-size: 1rem; }
+    .basic-info .profile .text-secondary {
+      font-size: 1.5rem;
+      font-weight: 500;
+      border-bottom: solid 3px #627083; }
   .basic-info .education-header {
     grid-area: eduheader;
-    background: #e3d3bc;
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-bottom: solid 3px #627083; }
   .basic-info .school-1 {
     grid-area: school1; }
   .basic-info .school-2 {
     grid-area: school2; }
   .basic-info .work-header {
     grid-area: jobheader;
-    background: #e3d3bc;
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-bottom: solid 3px #627083; }
   .basic-info .job-1 {
     grid-area: job1; }
   .basic-info .job-2 {
     grid-area: job2; }
   .basic-info .experience-header {
     grid-area: expheader;
-    background: #e3d3bc;
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-bottom: solid 3px #627083; }
   .basic-info .experience-1 {
     grid-area: exp1; }
   .basic-info .experience-2 {
@@ -134,10 +146,18 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 0.7rem; }
-  .projects img {
+  .projects .img-block .name {
+    top: 0;
+    left: 0;
+    height: 75px;
+    font-weight: 500;
+    font-size: 1.25rem;
+    text-align: center;
+    align-items: center; }
+  .projects .img-block img {
     width: 100%;
-    border: 3px solid #ffffff; }
-    .projects img:hover {
+    border: 3px solid #627083; }
+    .projects .img-block img:hover {
       opacity: 0.5;
       border-color: #6b7a8f;
       transition: .5s ease-out; }
@@ -171,22 +191,18 @@ main {
     grid-area: mail;
     padding-bottom: 1rem; }
 
-.btn, .btn-dark, .btn-light {
+.btn, .btn-dark {
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem; }
-  .btn:hover, .btn-dark:hover, .btn-light:hover {
+  .btn:hover, .btn-dark:hover {
     background-color: #6b7a8f;
     color: #000000; }
 
 .btn-dark {
-  background: #c6a374;
+  background: #f7882f;
   color: #ffffff; }
-
-.btn-light {
-  background: white;
-  color: #dcc7aa; }
 
 #main-footer {
   text-align: center;

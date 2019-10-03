@@ -77,6 +77,14 @@ header {
     color: $quaternary-color;
 }
 
+p {
+    margin: 0;
+    &.subtitle {
+        font-style: italic;
+    }
+}
+
+// Home Page
 main {
     padding: 4rem;
     min-height: calc(100vh - 60px);
@@ -88,7 +96,7 @@ main {
             padding: 0.4rem;
     
             &:hover {
-                color: darken($primary-color, 8);
+                color: darken($tertiary-color, 12);
                 @include easeOut;
             }
         }
@@ -107,7 +115,7 @@ main {
     padding: 0.4rem;
 
     &:hover {
-        color: darken($primary-color, 12);
+        color: darken($tertiary-color, 12);
         @include easeOut;
     }
 }
@@ -136,17 +144,25 @@ main {
 
     .profile {
         grid-area: bio;
-        font-size: 1.5rem;
+        font-size: 1rem;
+
+        .text-secondary {
+            font-size: 1.5rem;
+            font-weight: 500;
+            border-bottom: solid 3px rgba(darken($secondary-color, 4), 1);
+        }
     }
 
     .education-header {
         grid-area: eduheader;
-        background: lighten($primary-color, 5);
         font-size: 1.5rem;
+        font-weight: 500;
+        border-bottom: solid 3px rgba(darken($secondary-color, 4), 1);
     }
 
     .school-1 {
         grid-area: school1;
+
     }
 
     .school-2 {
@@ -155,8 +171,9 @@ main {
 
     .work-header {
         grid-area: jobheader;
-        background: lighten($primary-color, 5);
         font-size: 1.5rem;
+        font-weight: 500;
+        border-bottom: solid 3px rgba(darken($secondary-color, 4), 1);
     }
 
     .job-1 {
@@ -169,8 +186,9 @@ main {
 
     .experience-header {
         grid-area: expheader;
-        background: lighten($primary-color, 5);
         font-size: 1.5rem;
+        font-weight: 500;
+        border-bottom: solid 3px rgba(darken($secondary-color, 4), 1);
     }
 
     .experience-1 {
@@ -192,14 +210,25 @@ main {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 0.7rem;
 
-    img {
-        width: 100%;
-        border: 3px solid #ffffff;
+    .img-block {
+        .name {
+            top: 0;
+            left: 0;
+            height: 75px;
+            font-weight: 500;
+            font-size: 1.25rem;
+            text-align: center;
+            align-items: center;
+        }
 
-        &:hover {
-            opacity: 0.5;
-            border-color: $secondary-color;
-            @include easeOut;
+        img {
+            width: 100%;
+            border: 3px solid darken($secondary-color, 4);
+            &:hover {
+                opacity: 0.5;
+                border-color: $secondary-color;
+                @include easeOut;
+            }        
         }
     }
 }
@@ -271,14 +300,8 @@ main {
 
 .btn-dark {
     @extend .btn;
-    background: darken($primary-color, 15);
+    background: $quaternary-color;
     color: #ffffff;
-}
-
-.btn-light {
-    @extend .btn;
-    background: lighten($primary-color, 50);
-    color: $primary-color;
 }
 
 #main-footer {

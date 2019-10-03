@@ -18,6 +18,7 @@ $background-opacity: 0.0;
             background-position: top center;
             background-attachment: fixed;
             background-size: cover;
+            background-color: lighten($secondary-color, 30);
 
             &:after {
                 content: "";

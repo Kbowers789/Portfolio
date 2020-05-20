@@ -97,7 +97,14 @@ main {
 .basic-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: 'bio-image bio' 'eduheader eduheader' 'school1 school2' 'jobheader jobheader' 'job1 job2' 'expheader expheader' 'exp1 exp2' 'exp3 exp3';
+  grid-template-areas: 'bio-image bio'
+ 'eduheader eduheader'
+ 'school1 school2'
+ 'jobheader jobheader'
+ 'job1 job2'
+ 'expheader expheader'
+ 'exp1 exp2'
+ 'exp3 exp3';
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto; }
   .basic-info .bio-image {
@@ -145,26 +152,76 @@ main {
 .projects {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 0.7rem; }
-  .projects .img-block .name {
-    top: 0;
-    left: 0;
-    height: 75px;
+  grid-gap: 0.7rem;
+}
+ 
+.projects .name {
     font-weight: 500;
     font-size: 1.25rem;
     text-align: center;
-    align-items: center; }
-  .projects .img-block img {
+    align-items: center;
+  }
+
+  .projects .img-block {
+    position: relative;
+    height: 300px;
+    width: 1fr;
+    border: 3px solid #627083;
+    background-size: 100%;
+    background-color: #627083;
+    background-attachment: top center;
+  }
+
+  #frog-toad {
+    background-image: url('../img/frog-toad.png');
+  }
+  #edutrac {
+    background-image: url('../img/EduTrac.png');
+  }
+  #dictionary {
+    background-image: url('../img/dictionary.png');
+  }
+  #stock-graph {
+    background-image: url('../img/stocks.png');
+  }
+  #emp-payroll {
+    background-image: url('../img/Payroll.png');
+  }
+  #mambo-ai {
+    background-image: url('../img/Mambo-AI.png');
+  }
+
+  .projects .img-block .overlay {
+    position: absolute;
+    opacity: 0;
+    height: 100%;
+    width:0;
+    top:0;
+    left:0;
+    background-color: #627083;
+    transition: all .5s ease;      
+  }
+    
+  .projects .img-block:hover .overlay {
+    opacity: 1;
     width: 100%;
-    border: 3px solid #627083; }
-    .projects .img-block img:hover {
-      opacity: 0.5;
-      border-color: #6b7a8f;
-      transition: .5s ease-out; }
+  }
+
+  .projects .img-block .overlay .overlayText {
+      position: absolute;
+      font-family: sans-serif;
+      text-align: left;
+      color: white;
+    }
 
 .boxes {
   display: grid;
-  grid-template-areas: 'email-header   blank' 'email  blank' 'phone-header   blank' 'phone  blank' 'mail-header    blank' 'mail   blank';
+  grid-template-areas: 'email-header   blank'
+ 'email  blank'
+ 'phone-header   blank'
+ 'phone  blank'
+ 'mail-header    blank'
+ 'mail   blank';
   grid-template-columns: 1fr 1fr;
   align-items: center;
   text-align: left;
@@ -229,13 +286,29 @@ main {
       line-height: 1;
       margin-bottom: 1rem; }
   .basic-info {
-    grid-template-areas: 'bio-image' 'bio' 'eduheader' 'school1' 'school2' 'jobheader' 'job1' 'job2' 'expheader' 'exp1' 'exp2' 'exp3';
+    grid-template-areas: 'bio-image'
+ 'bio'
+ 'eduheader'
+ 'school1'
+ 'school2'
+ 'jobheader'
+ 'job1'
+ 'job2'
+ 'expheader'
+ 'exp1'
+ 'exp2'
+ 'exp3';
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); }
   .boxes {
     grid-template-columns: 1fr;
-    grid-template-areas: 'email-header' 'email' 'phone-header' 'phone' 'mail-header' 'mail';
+    grid-template-areas: 'email-header'
+ 'email'
+ 'phone-header'
+ 'phone'
+ 'mail-header'
+ 'mail';
     text-align: center;
     align-items: center; } }
 

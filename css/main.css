@@ -9,7 +9,7 @@ body {
   font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-image {
-    background: url(../img/Matterhorn.jpg);
+    background: url(../img/Matterhorn.JPG);
     background-position: top center;
     background-attachment: fixed;
     background-size: cover; }

@@ -105,8 +105,8 @@ main {
  'expheader expheader'
  'shacad shpers'
  'exp1 exp4'
- 'exp2 exp2'
- 'exp3 exp3';
+ 'exp2 exp4'
+ 'exp3 exp4';
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto; }
   .basic-info .bio-image {

@@ -103,7 +103,9 @@ main {
  'jobheader jobheader'
  'job1 job2'
  'expheader expheader'
- 'exp1 exp2'
+ 'shacad shpers'
+ 'exp1 exp4'
+ 'exp2 exp2'
  'exp3 exp3';
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto; }
@@ -142,12 +144,26 @@ main {
     font-size: 1.5rem;
     font-weight: 500;
     border-bottom: solid 3px #627083; }
+  .basic-info .subheadacad {
+    grid-area: shacad;
+    font-size: 1.6rem;
+    font-weight: 500;
+    font-style: italic;
+  }
+  .basic-info .subheadpers {
+    grid-area: shpers;
+    font-size: 1.6rem;
+    font-weight: 500;
+    font-style: italic;
+  }
   .basic-info .experience-1 {
     grid-area: exp1; }
   .basic-info .experience-2 {
     grid-area: exp2; }
   .basic-info .experience-3 {
     grid-area: exp3; }
+  .basic-info .experience-4 {
+    grid-area: exp4; }
 
 .projects {
   display: grid;

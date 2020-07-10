@@ -167,18 +167,43 @@ main {
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 0.7rem;
-}
- 
-.projects .name {
+  grid-template-areas:
+  'personal-header'
+  'personal-projects'
+  'school-header'
+  'school-projects';
+  grid-gap: 0.7rem; }
+
+  .projects .project-header {
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-bottom: solid 3px #627083;
+  }
+  .projects .personal-header {
+    grid-area: 'personal-header';
+  }
+  .projects .school-header {
+    grid-area: 'school-header';
+  }
+  .projects .project-block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.7rem;
+  }
+
+  .projects .personal-projects {
+    grid-area: 'personal-projects';
+  }
+  .projects .school-projects {
+    grid-area: 'school-projects';
+  }
+  .projects .project-block .name {
     font-weight: 500;
     font-size: 1.25rem;
     text-align: center;
     align-items: center;
   }
-
-  .projects .img-block {
+  .projects .project-block .img-block {
     position: relative;
     height: 300px;
     width: 1fr;
@@ -187,7 +212,12 @@ main {
     background-color: #627083;
     background-attachment: top center;
   }
-
+  #assign-students {
+    background-image: url('../img/AsignStudents.png');
+  }
+  #graphghan-converter {
+    background-image: url('../img/GraphghanConverter.png');
+  }
   #frog-toad {
     background-image: url('../img/frog-toad.png');
   }
@@ -206,8 +236,7 @@ main {
   #mambo-ai {
     background-image: url('../img/Mambo-AI.png');
   }
-
-  .projects .img-block .overlay {
+  .projects .project-block .img-block .overlay {
     position: absolute;
     opacity: 0;
     height: 100%;
@@ -216,19 +245,17 @@ main {
     left:0;
     background-color: #627083;
     transition: all .5s ease;      
-  }
-    
-  .projects .img-block:hover .overlay {
+  }  
+  .projects .project-block .img-block:hover .overlay {
     opacity: 1;
     width: 100%;
   }
-
-  .projects .img-block .overlay .overlayText {
-      position: absolute;
-      font-family: sans-serif;
-      text-align: left;
-      color: white;
-    }
+  .projects .project-block .img-block .overlay .overlayText {
+    position: absolute;
+    font-family: sans-serif;
+    text-align: left;
+    color: white;
+  }
 
 .boxes {
   display: grid;
@@ -269,30 +296,33 @@ main {
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem; }
+  
   .btn:hover, .btn-dark:hover {
     background-color: #6b7a8f;
     color: #000000; }
-
-.btn-dark {
-  background: #f7882f;
-  color: #ffffff; }
+  .btn-dark {
+    background: #f7882f;
+    color: #ffffff; }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
   background: #627083;
   color: #000000;
-  height: 60px; }
+  height: 60px;
+}
 
 @media screen and (min-width: 1171px) {
-  .projects {
+  .projects .project-block {
     grid-template-columns: repeat(4, 1fr); }
   .boxes {
-    grid-template-columns: 1fr 2fr; } }
+    grid-template-columns: 1fr 2fr; }
+}
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
-  .projects {
-    grid-template-columns: repeat(3, 1fr); } }
+  .projects .project-block {
+    grid-template-columns: repeat(3, 1fr); }
+}
 
 @media screen and (max-width: 768px) {
   main {
@@ -315,7 +345,7 @@ main {
  'exp2'
  'exp3';
     grid-template-columns: 1fr; }
-  .projects {
+  .projects .project-block {
     grid-template-columns: repeat(2, 1fr); }
   .boxes {
     grid-template-columns: 1fr;
@@ -326,12 +356,14 @@ main {
  'mail-header'
  'mail';
     text-align: center;
-    align-items: center; } }
+    align-items: center; }
+}
 
 @media screen and (max-width: 500px) {
   main#home h1 {
     margin-top: 10vh; }
-  .projects {
+  .projects .project-block {
     grid-template-columns: 1fr; }
   .boxes {
-    margin: 0 0; } }
+    margin: 0 0; }
+}

@@ -341,9 +341,12 @@ main {
  'job1'
  'job2'
  'expheader'
+ 'shacad'
  'exp1'
  'exp2'
- 'exp3';
+ 'exp3'
+ 'shpers'
+ 'exp4';
     grid-template-columns: 1fr; }
   .projects .project-block {
     grid-template-columns: repeat(2, 1fr); }

@@ -197,23 +197,8 @@ main {
   .projects .school-projects {
     grid-area: 'school-projects';
   }
-  .projects .project-block .name {
-    font-weight: 500;
-    font-size: 1.25rem;
-    text-align: center;
-    align-items: center;
-  }
-  .projects .project-block .img-block {
-    position: relative;
-    height: 300px;
-    width: 1fr;
-    border: 3px solid #627083;
-    background-size: 100%;
-    background-color: #627083;
-    background-attachment: top center;
-  }
   #assign-students {
-    background-image: url('../img/AsignStudents.png');
+    background-image: url('../img/AssignStudents.png');
   }
   #graphghan-converter {
     background-image: url('../img/GraphghanConverter.png');
@@ -236,25 +221,49 @@ main {
   #mambo-ai {
     background-image: url('../img/Mambo-AI.png');
   }
-  .projects .project-block .img-block .overlay {
-    position: absolute;
-    opacity: 0;
-    height: 100%;
-    width:0;
-    top:0;
-    left:0;
-    background-color: #627083;
-    transition: all .5s ease;      
-  }  
-  .projects .project-block .img-block:hover .overlay {
-    opacity: 1;
-    width: 100%;
+  .prj-name {
+    font-weight: 500;
+    font-size: 1.25rem;
+    text-align: center;
+    align-items: center;
   }
-  .projects .project-block .img-block .overlay .overlayText {
+  .img-card {
+    position: relative;
+    height: 300px;
+    max-width: 350px;
+    width: 1fr;
+    border: 3px solid #627083;
+    background-size: 350px 300px;
+    background-color: #627083;
+    background-attachment: top center;
+    transition: 0.5s ease;
+  }
+  .cardText {
     position: absolute;
-    font-family: sans-serif;
+    background-color: #627083;
+    height: 10%;
+    bottom: 0;
+    color: #fff;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  .cardText:hover {
+    height: 100%;
+  }
+  .cardText h4 {
+    margin: 5px 0 0 0;
+    font-weight: 400;
+    text-align: center;
+  }
+  .cardText table, th, td {
+    padding: 5px;
     text-align: left;
-    color: white;
+    vertical-align: top;
+    font-weight: 350;
+    font-size: 0.85em;
+  }
+  .prj a {
+    margin-top: 5px;
   }
 
 .boxes {
@@ -322,6 +331,9 @@ main {
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects .project-block {
     grid-template-columns: repeat(3, 1fr); }
+  .cardText table, th, td {
+    font-size: 0.8em;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -350,6 +362,9 @@ main {
     grid-template-columns: 1fr; }
   .projects .project-block {
     grid-template-columns: repeat(2, 1fr); }
+  .cardText table, th, td {
+    font-size: 0.75em;
+    }
   .boxes {
     grid-template-columns: 1fr;
     grid-template-areas: 'email-header'
@@ -367,6 +382,9 @@ main {
     margin-top: 10vh; }
   .projects .project-block {
     grid-template-columns: 1fr; }
+  .cardText table, th, td {
+    font-size: 0.85em;
+  }
   .boxes {
     margin: 0 0; }
 }

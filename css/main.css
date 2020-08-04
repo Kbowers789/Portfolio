@@ -103,10 +103,12 @@ main {
  'jobheader jobheader'
  'job1 job2'
  'expheader expheader'
- 'shacad shpers'
- 'exp1 exp4'
+ 'shpers shpers'
+ 'exp6 exp6'
+ 'shacad shacad'
+ 'exp1 exp3'
  'exp2 exp4'
- 'exp3 exp4';
+ 'exp5 exp5';
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto; }
   .basic-info .bio-image {
@@ -164,7 +166,11 @@ main {
     grid-area: exp3; }
   .basic-info .experience-4 {
     grid-area: exp4; }
-
+  .basic-info .experience-5 {
+      grid-area: exp5; }
+  .basic-info .experience-6 {
+      grid-area: exp6; }
+      
 .projects {
   display: grid;
   grid-template-areas:
